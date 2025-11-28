@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  /* YouTube Studio dark approximations */
+  --background: #202124; /* main app bg */
+  --surface: #2b2c2f;   /* card/chart bg */
+  --surface-elev: #313235;/* elevated */
+  --border: #3e4043;
+  --muted: #9aa0a6;
+  --foreground: #e8eaed;
+  --accent: #3ea6ff; /* cyan line */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Force dark theme look by default; adjust above if you want system-based switch */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system;
+}
+
+.card {
+  border-radius: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  box-shadow: none;
+}
+
+.card {
+  /* convenience utility for card styling */
+  border-radius: 0.5rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
